@@ -14,17 +14,6 @@
 </head>
 <body>
     <main id="container">
-        <div id="toast-container">
-            <p>
-                Mensagem enviada com sucesso!
-            </p>
-
-            <svg onclick="closeMessage()" id="toast-close-icon" width="800px" height="800px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 21.32L21 3.32001" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M3 3.32001L21 21.32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
-
         <nav class="nav-desktop">
             <a href="../index.html">
                 <img src="../img/BS.svg" alt="logo" />
@@ -69,15 +58,25 @@
                 <a href="mailto:brener.dev@gmail.com">brener.dev@gmail.com</a>
             </div>
 
-            <form>
+            <form autocomplete="off">
                 <div>
-                    <input placeholder="John Doe" />
-                    <input placeholder="john@doe.com" type="email" />
+                    <div class="form-control">
+                        <label for="name">Nome</label>
+                        <input required placeholder="John Doe" autocomplete="off" name="name" id="input-name"/>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="email">E-mail</label>
+                        <input required placeholder="john@doe.com" autocomplete="off" type="email" name="email" id="input-email"/>
+                    </div>
                 </div>
 
-                <textarea placeholder="Mensagem"></textarea>
+                <div class="form-control">
+                    <label for="message">Mensagem</label>
+                    <textarea required placeholder="Mensagem" autocomplete="off" name="message" id="input-message"></textarea>
+                </div>
 
-                <button type="button" onclick="sendMessage()" class="btn-primary-light" type="submit">Enviar</button>
+                <button class="btn-primary-light" type="submit">Enviar</button>
             </form>
         </section>
     </main>
