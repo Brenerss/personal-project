@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/index.css">
+
+    <script type="text/javascript" src="./js/menu.js"></script>
 
     <title>Brener - Website Pessoal</title>
 </head>
 <body>
     <main id="container">
-        <nav>
-            <img src="./img/BS.svg" alt="logo"/>
+        <nav class="nav-desktop">
+            <a href="./index.html">
+                <img src="./img/BS.svg" alt="logo" />
+            </a>
 
             <ul>
+                <li><a href="./index.html" class="text-secondary-light">Home</a></li>
+                <li><a href="./html/about.html" class="text-secondary-light">Sobre</a></li>
+                <li><a href="./html/projects.html" class="text-secondary-light">Projetos</a></li>
+                <li><a href="./html/news.html" class="text-secondary-light">Novidades</a></li>
+                <li><a href="./html/contact.html" class="text-secondary-light">Contato</a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-mobile">
+            <button class="btn-ghost" onclick="toggleMenu()">
+                <img class="menu-icon"  src="./img/menu.svg" alt="logo" />
+                <img class="x-icon" src="./img/x.svg" alt="logo" />
+            </button>
+
+            <ul id="menu">
                 <li><a href="./index.html" class="text-secondary-light">Home</a></li>
                 <li><a href="./html/about.html" class="text-secondary-light">Sobre</a></li>
                 <li><a href="./html/projects.html" class="text-secondary-light">Projetos</a></li>
@@ -47,5 +62,29 @@
             </p>
         </header>
     </main>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/brener-sousa/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" fill="currentColor">
+                <g color="var(--token-b243fa83-280c-408f-875b-746794890bfe, rgb(18, 18, 18))" weight="regular">
+                    <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z">
+                    </path>
+                </g>
+            </svg>
+        </a>
+
+        <a href="https://www.instagram.com/brener.io/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" fill="currentColor">
+                <g color="var(--token-b243fa83-280c-408f-875b-746794890bfe, rgb(18, 18, 18))" weight="regular">
+                    <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                    </path>
+                </g>
+            </svg>
+        </a>
+
+        <a href="https://github.com/Brenerss" target="_blank">
+            <img src="./img/github-mark-white.svg" alt="github"/>
+        </a>
+    </footer>
 </body>
 </html>
