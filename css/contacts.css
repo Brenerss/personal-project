@@ -28,6 +28,36 @@
         & > div {
             display: flex;
             gap: 1rem;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
         }
+    }
+}
+
+#toast-container {
+    background-color: #1F67F1;
+    border-radius: 10px;
+    color: white;
+
+    padding: 1rem;
+    margin: 2rem;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    display: none;
+    align-items: center;
+    gap: 1rem;
+
+    svg {
+        height: 16px;
+        width: 16px;
+        fill: white !important;
+
+        cursor: pointer;
     }
 }
